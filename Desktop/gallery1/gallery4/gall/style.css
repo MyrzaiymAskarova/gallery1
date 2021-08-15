@@ -1,0 +1,83 @@
+body {
+	background: #222;
+}
+input[name="img"] {
+	display: none;
+	}
+.wrapper {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 1100px;
+	height: 700px;
+	margin-top: 10%;
+}
+.gallery {
+	margin: 0 auto;
+	width: 900px;
+	position: relative; 
+	padding-top: 37%; 	
+	line-height: 0; 	
+	background-size: auto 100%;
+	background: no-repeat 50% 0; 
+	} 
+.gallery label {
+	display: inline-block; 
+	width: 105px; 
+	height: 58px;
+    margin-top: 110px;	 
+	margin-left: 3.5px;
+	background: no-repeat 50% 50%; 
+	background-size: calc(100% - 4px) calc(100% - 4px); 
+	cursor: pointer;
+	}
+#img1:checked ~ .gallery label:nth-of-type(1), 
+#img2:checked ~ .gallery label:nth-of-type(2),
+#img3:checked ~ .gallery label:nth-of-type(3),
+#img4:checked ~ .gallery label:nth-of-type(4),
+#img5:checked ~ .gallery label:nth-of-type(5),
+#img6:checked ~ .gallery label:nth-of-type(6),
+#img7:checked ~ .gallery label:nth-of-type(7),
+#img8:checked ~ .gallery label:nth-of-type(8) {
+	opacity: .3; 
+	}
+
+#img1:checked ~ .gallery, .gallery label:nth-of-type(1) {background-image: url(images/img1.jpg);}
+#img2:checked ~ .gallery, .gallery label:nth-of-type(2) {background-image: url(images/img2.jpg);}
+#img3:checked ~ .gallery, .gallery label:nth-of-type(3) {background-image: url(images/img3.jpg);}
+#img4:checked ~ .gallery, .gallery label:nth-of-type(4) {background-image: url(images/img4.jpg);}
+#img5:checked ~ .gallery, .gallery label:nth-of-type(5) {background-image: url(images/img5.jpg);}
+#img6:checked ~ .gallery, .gallery label:nth-of-type(6) {background-image: url(images/img6.jpg);}
+#img7:checked ~ .gallery, .gallery label:nth-of-type(7) {background-image: url(images/img7.jpg);}
+#img8:checked ~ .gallery, .gallery label:nth-of-type(8) {background-image: url(images/img8.jpg);}
+
+/*Стрелочки*/
+.gallery label:before { 
+ position: absolute; 
+ top: 40%; 
+ border-width: 50px 25px; 
+ border-style: solid;}
+#img1:checked ~ .gallery label:nth-of-type(2):before, 
+#img2:checked ~ .gallery label:nth-of-type(3):before,
+#img3:checked ~ .gallery label:nth-of-type(4):before,
+#img4:checked ~ .gallery label:nth-of-type(5):before,
+#img5:checked ~ .gallery label:nth-of-type(6):before,
+#img6:checked ~ .gallery label:nth-of-type(7):before,
+#img7:checked ~ .gallery label:nth-of-type(8):before,
+#img8:checked ~ .gallery label:nth-of-type(1):before {
+	content: ""; 
+	right: -60px; 
+	border-color: transparent transparent transparent #444; 
+	}
+#img1:checked ~ .gallery label:nth-of-type(8):before,
+#img2:checked ~ .gallery label:nth-of-type(1):before, 
+#img3:checked ~ .gallery label:nth-of-type(2):before, 
+#img4:checked ~ .gallery label:nth-of-type(3):before, 
+#img5:checked ~ .gallery label:nth-of-type(4):before,
+#img6:checked ~ .gallery label:nth-of-type(5):before, 
+#img7:checked ~ .gallery label:nth-of-type(6):before, 
+#img8:checked ~ .gallery label:nth-of-type(7):before{
+	content: ""; 
+	left: -60px; 
+	border-color: transparent #444 transparent transparent; 
+	}
+
